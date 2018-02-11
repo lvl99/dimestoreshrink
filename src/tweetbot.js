@@ -57,7 +57,7 @@ DimestoreTweetbot.diagnosisToImage = function (diagnosis) {
   svgCode.push('<rect x="-1" y="-1" width="1002" height="1002" fill="' + colors.blue + '" />')
 
   // Header name
-  svgCode.push('<text x="40" y="60" class="header-name">Dr Hugh Schtink, Dimestore Shrink</text>')
+  svgCode.push('<text x="40" y="60" class="header-name">Dr Hugh Schtinck, Dimestore Shrink</text>')
   svgCode.push('<text x="40" y="120" class="footer-text">' + funnyHeader() + '</text>')
   svgCode.push('<text x="40" y="220" class="header-text">I believe you have ' + diagnosis.level + ' ' + diagnosis.type + ' of... </text>')
 

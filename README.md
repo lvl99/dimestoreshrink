@@ -1,4 +1,4 @@
-# Dr. Hugh Schtink, Dimestore Shrink
+# Dr. Hugh Schtinck, Dimestore Shrink
 
 By Matt Scheurich <matt@lvl99.com>
 
@@ -13,7 +13,7 @@ conditions and human-readable descriptions to accompany them.
 
 After I did that, some point later I read an article on [Motherboard](https://motherboard.vice.com/en_us/article/mg7g3y/how-to-make-a-not-racist-bot)
 about bots and thought it'd be interesting to experiment by porting Dimestore Shrink's generative parts into an
-(somewhat) interactive twitterbot, called Dr. Hugh Schtink.
+(somewhat) interactive twitterbot, called Dr. Hugh Schtinck.
 
 I made this at some point in early/mid 2016, so the JS code is still in ES5.
 
