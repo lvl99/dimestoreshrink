@@ -1,0 +1,13 @@
+{% extends '_layout.twig' %}
+
+{% block content %}
+
+  <h2>Whoops!</h2>
+  <p>Not sure what you did there, but I'm pretty sure it's due to your condition!</p>
+  <p><a href="{{ site.url }}">Tell me what I got, doc!</a></p>
+
+  {% if env == 'development' %}
+  <pre><code>{{ dump() }}</code></pre>
+  {% endif %}
+
+{% endblock %}

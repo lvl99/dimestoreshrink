@@ -1,0 +1,16 @@
+{% extends '_layout.twig' %}
+
+{% block content %}
+
+  <h2>Tweetbot data</h2>
+  <ul>
+    <li><a href="/tweetbot/postrandom">Post random diagnosis</a></li>
+    <li><a href="/tweetbot/replies">Check for replies</a></li>
+    <li><a href="/tweetbot/retweets">Favourite retweets</a></li>
+  </ul>
+  
+  {% if tweetbot is not empty %}
+    <pre><code>{{ dump(tweetbot) }}</code></pre>
+  {% endif %}
+
+{% endblock %}

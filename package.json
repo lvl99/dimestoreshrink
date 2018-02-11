@@ -1,0 +1,29 @@
+{
+  "name": "dimestoreshrink",
+  "version": "1.0.0",
+  "description": "Random psychological condition generator",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "author": "Matt Scheurich <matt@lvl99.com> (http://lvl99.com/)",
+  "license": "WTFPL",
+  "engines": {
+    "node": ">=5.10"
+  },
+  "dependencies": {
+    "assign": "0.1.7",
+    "atob": "2.0.3",
+    "bluebird": "3.5.1",
+    "btoa": "1.1.2",
+    "config": "^1.29.4",
+    "express": "4.16.2",
+    "firebase": "4.9.1",
+    "morgan": "1.9.0",
+    "svg2png": "4.1.1",
+    "twig": "1.10.5",
+    "twit": "2.2.9"
+  }
+}

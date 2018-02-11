@@ -1,0 +1,12 @@
+!.gitignore
+.idea
+.DS_Store
+node_modules
+bower_components
+logs
+static/images/diagnoses/*
+!static/images/diagnoses/.gitkeep
+
+# Hide for public repo!
+config/development.js
+config/production.js

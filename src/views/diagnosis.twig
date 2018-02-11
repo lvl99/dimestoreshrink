@@ -1,0 +1,41 @@
+{% extends '_layout.twig' %}
+
+{% set twitterShareText = 'That quack @dimestoreshrink thinks I have ' ~ diagnosis.level ~ ' ' ~ diagnosis.type ~ ' "' ~ diagnosis.output.name ~ '" ' ~ page.permalink %}
+{% set emailShareSubject = 'That quack Dr Hugh Schtinck, the Dimestore Shrink, thinks I have ' ~ diagnosis.level ~ ' ' ~ diagnosis.type ~ ' "' ~ diagnosis.output.name ~ '"' %}
+{% set emailShareBody = 'If you want to read more about my "alleged" psychological condition, see ' ~ page.permalink %}
+
+{% block extendOGTags %}
+  <meta property="og:url" content="{{ page.permalink }}" />
+  <link rel="canonical" href="{{ page.permalink }}" />
+{% endblock %}
+
+{% block content %}
+  <article class="diagnosis">
+    <header class="diagnosis-header">
+      <h5 class="diagnosis-subtitle">I believe you have {{ diagnosis.level }} {{ diagnosis.type }} of...</h5>
+      <h1 class="diagnosis-title">{{ diagnosis.output.name }}</h1>
+    </header>
+    <div class="diagnosis-content">
+      <p>{{ diagnosis.output.description }}</p>
+    </div>
+    <footer class="diagnosis-footer">
+      <div class="columns">
+        <div class="column diagnosis-share">
+          <a href="{{ page.permalink }}" class="fa fa-thumb-tack" title="Bookmark your unique diagnosis so you can reference it again"><span>Permalink</span></a>
+          <a href="http://facebook.com/sharer.php?u={{ page.permalink|url_encode }}" target="_blank" class="fa fa-facebook" title="Share your mental state on Facebook (wait, you probably do that too much already...)"><span>Share on Facebook</span></a>
+          <a href="https://twitter.com/intent/tweet?text={{ twitterShareText|url_encode }}" target="_blank" class="fa fa-twitter" title="Tweet your mental state to your imaginary followers"><span>Tweet this</span></a>
+          <a href="mailto:?subject={{ emailShareSubject|url_encode }}!&amp;body={{ emailShareBody|url_encode }}" class="fa fa-envelope" title="Email your therapist"><span>Email your therapist</span></a>
+        </div>
+        <div class="column diagnosis-menu">
+          <a href="/" class="button" title="Let's dig a little deeper into your psyche...">What else have I got, doc?</a>
+          <a href="http://www.google.com/search?q={{ 'Therapists near me'|url_encode }}" title="You want a second opinion? You think I'm not good enough?!"><small>I want a second opinion&hellip;</small></a>
+        </div>
+      </div>
+    </footer>
+    <aside class="secondary">
+      <p class="stats">It's OK &mdash; you're not alone. Many others have a similar condition to you.</p>
+      <p class="msg-of-love">But seriously, if you feel that you may have some issue or mental condition that is adversely affecting you, please talk to family, friends or a professional. Communication is the key and you'll feel a lot better :)</p>
+    </aside>
+  </article><!-- /.diagnosis -->
+  {% if env == 'development' %}<pre><code>{{ dump(diagnosis) }}</code></pre>{% endif %}
+{% endblock %}
